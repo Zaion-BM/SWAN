@@ -1,0 +1,13 @@
+# Target labels
+ mconf-idf
+# Source files and their labels
+/home/pep/eclipse-workspace/SWAN/build/CMakeFiles/mconf-idf
+/home/pep/eclipse-workspace/SWAN/build/CMakeFiles/mconf-idf.rule
+/home/pep/eclipse-workspace/SWAN/build/CMakeFiles/mconf-idf-complete.rule
+/home/pep/eclipse-workspace/SWAN/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install.rule
+/home/pep/eclipse-workspace/SWAN/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir.rule
+/home/pep/eclipse-workspace/SWAN/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download.rule
+/home/pep/eclipse-workspace/SWAN/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update.rule
+/home/pep/eclipse-workspace/SWAN/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch.rule
+/home/pep/eclipse-workspace/SWAN/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure.rule
+/home/pep/eclipse-workspace/SWAN/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build.rule
