@@ -1,5 +1,3 @@
-# Blink Example
+Smart Watering Automation System (S.W.A.N.)
 
-Starts a FreeRTOS task to blink an LED
-
-See the README.md file in the upper level 'examples' directory for more information about examples.
+![SWAN logo](https://github.com/Zaion-BM/SWAN/blob/master/swan_logo.png) 
