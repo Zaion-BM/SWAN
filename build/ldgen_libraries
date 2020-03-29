@@ -56,3 +56,5 @@
 /home/pep/eclipse-workspace/SWAN/build/esp-idf/unity/libunity.a
 /home/pep/eclipse-workspace/SWAN/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 /home/pep/eclipse-workspace/SWAN/build/esp-idf/main/libmain.a
+/home/pep/eclipse-workspace/SWAN/build/esp-idf/cmd_nvs/libcmd_nvs.a
+/home/pep/eclipse-workspace/SWAN/build/esp-idf/cmd_system/libcmd_system.a

@@ -11,10 +11,11 @@
 #include "freertos/task.h"
 #include "driver/gpio.h"
 #include "sdkconfig.h"
+#include <string.h>
 
 //Custom headers
-#include "ADC.h"
-#include "I2C.h"
+#include "components/ADC/ADC.h"
+#include "components/I2C/I2C.h"
 
 //Defines
 #define LED 2
@@ -47,11 +48,40 @@ void ButtonState(){
 
 }
 
+TaskHandle_t I2C_Task_handle;
+
+void UART_CMD_Interpreter(){
+	while(1){
+	char c ='0';
+	char cmd[10]="";
+	uint8_t cmd_ptr = 0;
+
+	while(c!='\n'){
+		c = getchar();
+		if((c >= 'a') && (c <= 'z')) {
+			cmd[cmd_ptr]=c;
+			cmd_ptr++;
+		}
+
+		vTaskDelay(100/portTICK_PERIOD_MS);
+
+		if(cmd_ptr==9){
+			cmd_ptr=0;
+		}
+	}
+	if(strcmp(cmd,"temp\n")){
+		printf("Resume I2C Task\n");
+		vTaskResume(I2C_Task_handle);
+	}
+	printf("%s\n",cmd);
+	}
+}
+
 
 void app_main()
 {
 	xTaskCreate(ADC_Task,"ADC_read", 3*1024, NULL, 5, NULL);
 	xTaskCreate(ButtonState,"ButtonState", 3*1024, NULL, 5, NULL);
-	xTaskCreate(I2C_Task,"I2C_Task", 3*1024, NULL, 5, NULL);
-
+	xTaskCreate(I2C_Task,"I2C_Task", 3*1024, NULL, 5, &I2C_Task_handle);
+	xTaskCreate(UART_CMD_Interpreter,"UART_CMD_Interpreter", 3*1024, NULL, 5, NULL);
 }

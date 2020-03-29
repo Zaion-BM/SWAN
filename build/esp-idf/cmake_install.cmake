@@ -99,6 +99,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/pep/eclipse-workspace/SWAN/build/esp-idf/unity/cmake_install.cmake")
   include("/home/pep/eclipse-workspace/SWAN/build/esp-idf/wifi_provisioning/cmake_install.cmake")
   include("/home/pep/eclipse-workspace/SWAN/build/esp-idf/main/cmake_install.cmake")
+  include("/home/pep/eclipse-workspace/SWAN/build/esp-idf/cmd_nvs/cmake_install.cmake")
+  include("/home/pep/eclipse-workspace/SWAN/build/esp-idf/cmd_system/cmake_install.cmake")
 
 endif()
 

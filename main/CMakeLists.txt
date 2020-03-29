@@ -1,5 +1,5 @@
-idf_component_register(SRCS "main.c" 
-								"ADC.c"
-								"I2C.c"
-								"bmp280.c"
+idf_component_register(SRCS "main.c"
+								"components/ADC/ADC.c"
+								"components/I2C/I2C.c"
+								"components/I2C/bmp280.c"
                     INCLUDE_DIRS ".")
