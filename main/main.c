@@ -83,5 +83,5 @@ void app_main()
 	xTaskCreate(ADC_Task,"ADC_read", 3*1024, NULL, 5, NULL);
 	xTaskCreate(ButtonState,"ButtonState", 3*1024, NULL, 5, NULL);
 	xTaskCreate(I2C_Task,"I2C_Task", 3*1024, NULL, 5, &I2C_Task_handle);
-	xTaskCreate(UART_CMD_Interpreter,"UART_CMD_Interpreter", 3*1024, NULL, 5, NULL);
+	//xTaskCreate(UART_CMD_Interpreter,"UART_CMD_Interpreter", 3*1024, NULL, 5, NULL);
 }

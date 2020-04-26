@@ -170,7 +170,7 @@ void I2C_Task(){
 	int32_t temp32;
 	double temp;
 	uint32_t pres32;
-	uint64_t pres64;
+	uint32_t pres64;
 	double pres;
 
 	/* Map the delay function pointer with the function responsible for implementing the delay */
@@ -240,7 +240,7 @@ void I2C_Task(){
         rslt = bmp280_get_comp_pres_double(&pres, ucomp_data.uncomp_press, &bmp);
 
         /*Print Pressure Data*/
-        printf("UP: %d, P32: %d, P64: %lld, P64N: %lld, P: %lf\r\n",
+        printf("UP: %d, P32: %d, P64: %d, P64N: %d, P: %lf\r\n",
            					ucomp_data.uncomp_press,
         	                pres32,
         	                pres64,
